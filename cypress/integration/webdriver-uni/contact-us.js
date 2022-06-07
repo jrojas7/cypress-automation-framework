@@ -48,6 +48,11 @@ describe("Test Contact Us form via WebdriverUni", () => {
         //   cy.get("[value='SUBMIT']").click();
         //   cy.get("body").should("have.text", "\n\n\n Error: all fields are required\n\n\n");
         //cy.webdriverUni_contactForm_submission(data.first_name, data.last_name, " ", "How can I learn Cypress?", "body", "Error: Invalid email address");
-        contact_Us_PO.contactForm_submission(data.first_name, data.last_name, " ", "How can I learn Cypress?", "body", "Error: Invalid email address");
-    })
-})
+
+        if(Cypress.isBrowser('firefox')) {
+
+        } else {
+            contact_Us_PO.contactForm_submission(data.first_name, data.last_name, " ", "How can I learn Cypress?", "body", "Error: Invalid email address");
+        }
+    });
+});
