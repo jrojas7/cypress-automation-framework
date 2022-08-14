@@ -5,6 +5,7 @@
   "pageLoadTimeout": 40000,
   "viewportHeight": 1080,
   "viewportWidth": 1920,
+  "testFiles": "**/*.feature",
   "ignoreTestFiles": "same*.js",
   "screenshotsFolder": "cypress/screenshots",
   "videosFolder": "cypress/videos/testExecutionVideos",
@@ -24,4 +25,5 @@
     "reporterOptions": {
       "configFile": "reporter-config.json"
   }
+  
 }

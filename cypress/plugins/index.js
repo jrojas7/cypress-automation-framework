@@ -12,6 +12,7 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+
 const fs = require('fs-extra')
 const path = require('path')
 
@@ -32,4 +33,14 @@ module.exports = (on, config) => {
   const file = config.env.configFile
 
   return getConfigurationByFile(file)
+}
+
+module.exports = (on, config) => {
+  require('cypress-plugin-retries/lib/plugin') (on)
+}
+
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
 }
