@@ -1,3 +1,3 @@
 # cypress-automation-framework
 
-Automation for two applications.
+Automation test cases for two applications in Cypress.
